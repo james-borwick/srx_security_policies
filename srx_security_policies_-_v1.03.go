@@ -184,7 +184,7 @@ func securityPoliciesOutput() {
 }
 
 func main() {
-	fmt.Print(`James Borwick
+	fmt.Print(`https://github.com/james-borwick
 
 ┌───────────────────────────────┐
 │ SRX Security Policies - v1.03 │
