@@ -56,7 +56,7 @@ func addressBookOutput() {
 	var nameCount int
 	var ipCount int
 	for i := 0; zoneCount != len(addressBookZoneSlice) && nameCount != len(addressBookNameSlice) && ipCount != len(addressBookIPSlice); i++ {
-		fmt.Println("set security address-book", addressBookZoneSlice[i], "address", addressBookNameSlice[i], addressBookIPSlice[i])
+		fmt.Println("set security zones security-zone", addressBookZoneSlice[i], "address-book address", addressBookNameSlice[i], addressBookIPSlice[i])
 		zoneCount++
 		nameCount++
 		ipCount++
