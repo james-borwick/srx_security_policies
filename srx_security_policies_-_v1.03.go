@@ -198,5 +198,5 @@ func main() {
 	applicationsOutput()
 	addressBookOutput()
 	securityPoliciesOutput()
-	fmt.Print("#\n\n")
+	fmt.Print("#\n")
 }
