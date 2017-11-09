@@ -60,8 +60,3 @@ func autoPoliciesOutput() {
 		fmt.Println(c)
 	}
 }
-
-/*func main() {
-	autoPoliciesInput()
-	autoPoliciesOutput()
-}*/
