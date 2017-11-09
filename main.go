@@ -187,12 +187,13 @@ func securityPoliciesOutput() {
 func main() {
 	fmt.Print(`https://github.com/james-borwick
 
-┌───────────────────────────────┐
+`)
+	for {
+		fmt.Print(`┌───────────────────────────────┐
 │ SRX Security Policies - v1.04 │
 └───────────────────────────────┘
 
 `)
-	for {
 		var option string
 		fmt.Print(`[1] Manual
 [2] Auto
