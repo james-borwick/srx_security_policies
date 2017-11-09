@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "os"
 
 var addressBookZoneSlice = make([]string, 0)
 var addressBookNameSlice = make([]string, 0)
@@ -184,7 +185,6 @@ func securityPoliciesOutput() {
 }
 
 func main() {
-	var option string
 	fmt.Print(`https://github.com/james-borwick
 
 ┌───────────────────────────────┐
@@ -193,8 +193,10 @@ func main() {
 
 `)
 	for {
+		var option string
 		fmt.Print(`[1] Manual
 [2] Auto
+[3] Exit
 
 Option: `)
 		fmt.Scanln(&option)
@@ -207,14 +209,17 @@ Option: `)
 			applicationsOutput()
 			addressBookOutput()
 			securityPoliciesOutput()
+			fmt.Print("#\n")
+			fmt.Print("\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\n")
+
 		}
 		if option == "2" {
 			autoPoliciesInput()
 			fmt.Print("\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\n")
 			autoPoliciesOutput()
+			fmt.Print("#\n")
+			fmt.Print("\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\n")
 		}
-		fmt.Print("#\n")
-		fmt.Print("\n─────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\n")
 		addressBookZoneSlice = nil
 		addressBookNameSlice = nil
 		addressBookIPSlice = nil
@@ -223,5 +228,8 @@ Option: `)
 		applicationsPortSlice = nil
 		securityPoliciesSlice = nil
 		autoSecurityPolicy = nil
+		if option == "3" {
+			os.Exit(0)
+		}
 	}
 }
