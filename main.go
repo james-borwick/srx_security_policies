@@ -190,7 +190,7 @@ func main() {
 `)
 	for {
 		fmt.Print(`┌───────────────────────────────┐
-│ SRX Security Policies - v1.04 │
+│ SRX Security Policies - v1.05 │
 └───────────────────────────────┘
 
 `)
