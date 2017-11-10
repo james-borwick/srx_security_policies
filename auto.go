@@ -5,12 +5,19 @@ import "fmt"
 var autoSecurityPolicy = make([]string, 0)
 
 func autoPoliciesInput() {
-	fmt.Print(`┌───────────┬─────────┬────────┬────────┬─────────────┬─────────────┐
-│ From Zone │ To Zone │ Policy │ Source │ Destination │ Application │
-└───────────┴─────────┴────────┴────────┴─────────────┴─────────────┘
+	fmt.Print(`Steps
+─────
+1. Create a spreadsheet with the following columns...
+    ┌───────────┬─────────┬────────┬────────┬─────────────┬─────────────┐
+    │ From Zone │ To Zone │ Policy │ Source │ Destination │ Application │
+    └───────────┴─────────┴────────┴────────┴─────────────┴─────────────┘
+2. Fill out all of the rows
+3. Copy and paste the cells below
 
+Rules
+─────
 • No empty cells
-• No spaces within cells
+• No spaces in the cells
 • One item per cell
 • Use # to ignore a cell
 
